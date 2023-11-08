@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orhaddao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:25:16 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/03 16:27:45 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/07 21:01:20 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == (char)c)

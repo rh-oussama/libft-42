@@ -6,11 +6,25 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:29:01 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/06 13:11:41 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:37:30 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	**free_split(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (NULL);
+}
 
 static int	word_count(const char *s, char c)
 {
@@ -67,6 +81,8 @@ static char	**ft_split_words(char const *s, char c, char **arr, int word_count)
 			wl++;
 		}
 		arr[w] = (char *) malloc(sizeof(char) *(wl + 1));
+		if (!arr[w])
+			return (free_split(arr));
 		ft_fill(arr[w], s, i, wl);
 		wl = 0;
 		w++;
