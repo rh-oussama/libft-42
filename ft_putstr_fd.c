@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:38:31 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/07 10:44:02 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:46:32 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s || fd < 0)
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);

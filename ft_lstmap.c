@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:57:23 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/08 11:45:55 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/09 09:32:10 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void(*del)(void*))
 	t_list	*new;
 	t_list	*start;
 
-	if (lst == NULL || f == NULL)
+	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
-	start = 0;
+	start = NULL;
 	while (lst)
 	{
 		new = ft_lstnew((*f)(lst -> content));

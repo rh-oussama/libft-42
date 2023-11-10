@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:44:34 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/07 11:05:35 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/10 16:52:44 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (fd < 0 || s == NULL)
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);

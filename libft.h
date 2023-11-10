@@ -6,16 +6,18 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:29:08 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/08 11:09:39 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:34:12 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
+
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include <fcntl.h>
+# include <limits.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
