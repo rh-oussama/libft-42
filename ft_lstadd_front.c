@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:41:16 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/10 17:04:44 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:24:08 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst != NULL)
-	{
-		if (*lst != NULL)
-			new -> next = *lst;
-		*lst = new;
-	}
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 
 // #include <stdio.h>

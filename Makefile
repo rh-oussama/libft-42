@@ -38,3 +38,4 @@ re: fclean all
 bonus: $(NAME) $(BONUS_OBJS)
 	@ar rc $(NAME) $(BONUS_OBJS)
 	@ranlib $(NAME)
+.PHONY: all clean fclean re bonus

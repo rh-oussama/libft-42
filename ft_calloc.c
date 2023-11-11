@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:18:31 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/10 10:33:17 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:21:19 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 	void	*ptr;
 
-	if (size && nmemb >= (SIZE_MAX / size))
+	if (size && (SIZE_MAX / size) <= nmemb)
 		return (NULL);
 	total = nmemb * size;
 	ptr = malloc(total);

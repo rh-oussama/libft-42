@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:32:33 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/10 19:14:39 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:27:36 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*new_node;
+	t_list	*new;
 
-	new_node = malloc(sizeof(t_list));
-	if (new_node == NULL)
+	new = malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
-
 // #include <stdio.h>
 // int main()
 // {

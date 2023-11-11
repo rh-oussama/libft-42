@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:02:08 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/07 10:06:09 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:38:52 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	str = (char *)malloc(ft_strlen(s) + 1);
 	if (!str)

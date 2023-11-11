@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 19:15:38 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/06 10:21:47 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:35:25 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,23 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	size_t	len_s1;
-	size_t	len_s2;
-	size_t	total_len;
+	int		i;
+	int		j;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
-	len_s1 = 0;
-	len_s2 = 0;
-	if (s1)
-		len_s1 = ft_strlen(s1);
-	if (s2)
-		len_s2 = ft_strlen(s2);
-	total_len = len_s1 + len_s2;
-	str = (char *)malloc(total_len + 1);
-	if (!str)
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
 		return (NULL);
-	if (s1)
-		ft_strlcpy(str, s1, len_s1 + 1);
-	if (s2)
-		ft_strlcat(str, s2, total_len + 1);
+	i = 0;
+	j = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = 0;
 	return (str);
 }
