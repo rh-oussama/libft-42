@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:32:33 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/07 12:40:51 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:14:39 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,16 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+//     t_list *s;
+//     s = ft_lstnew("hello");
+//     while (s)
+//     {
+//         printf("content > %s\n", (char *)s->content);
+//         s = s->next;
+//     }
+//     return 0;
+// }

@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:54:30 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/10 16:51:35 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:36:36 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n < 0)
 	{
 		if (n == -2147483648)

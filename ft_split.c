@@ -6,7 +6,7 @@
 /*   By: orhaddao <orhaddao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:29:01 by orhaddao          #+#    #+#             */
-/*   Updated: 2023/11/08 11:37:30 by orhaddao         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:01:45 by orhaddao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,3 +105,22 @@ char	**ft_split(char const *s, char c)
 	arr = ft_split_words(s, c, arr, wc);
 	return (arr);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     const char *s = "#############dfgdfgfdgg##########";
+//     char d = '#';
+//     char **result = ft_split(s, d);
+//     if (result) 
+// 	 {
+//         int i = 0;
+//         while (result[i]) 
+// 		  {
+//             printf("String %d: %s\n", i, result[i]);
+//             i++;
+//         }
+//     }
+//     return 0;
+// }
