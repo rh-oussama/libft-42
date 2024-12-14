@@ -95,7 +95,3 @@ Generate bonus functions with:
 ```bash
 make bonus
 ```
-
-## Testing
-
-Use provided test suites or create your own to verify function implementations.
